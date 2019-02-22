@@ -20,3 +20,9 @@ for row in table.findAll('div', attrs = {'class':'portfolio-image'}):
 
 print(quotes)
 
+filename = 'inspirational_quotes.csv'
+with open(filename, 'wb') as f: 
+    w = csv.DictWriter(f,['theme','url','img']) 
+    w.writeheader() 
+    for quote in quotes: 
+        w.writerow(quote) 
