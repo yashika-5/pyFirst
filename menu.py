@@ -20,6 +20,9 @@ print("u have entered :", choice)
 if int(choice) == 1:
         print("My Os is RHEL")
 
+elif int(choice) == 2:
+	execfile('fb_login.py')
+
 elif int(choice) == 4:
             data = input("type something to search on google :")
             webbrowser.open_new_tab('https://www.google.com/search?q ='+data)
